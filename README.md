@@ -67,7 +67,9 @@ dotnet ef database update
 
 Here is a list of endpoints for the API that can be used by applications. For testing, you can use an API client such as [Postman](https://www.postman.com/downloads/) to make requests to the following endpoints.
 
-* CREATE an animal -- POST: http://localhost:5000/api/animals
+To use an endpoint, make a request to the endpoint with the proper domain as a base. If running the server locally, the domain will be ```http://localhost:5000``` by default. For example, for an endpoint of ```api/animals```, make a request to ```http://localhost:5000/api/animals```. 
+
+* CREATE an animal -- POST: api/animals
 To add an animal, make a POST request to the above URL. The JSON body should follow this format, as an example:
 ```
 { 
@@ -83,5 +85,5 @@ To add an animal, make a POST request to the above URL. The JSON body should fol
 }
 ```
 
-* READ all animals -- GET: http://localhost:5000/api/animals
+* READ all animals -- GET: api/animals
 To retrieve a JSON response listing all of the animals, make a GET request to the above URL.
