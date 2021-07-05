@@ -14,7 +14,18 @@
 
 ## Description
 
-/*TODO*/
+An API built in C# with .NET 5 and Entity Framework for an animal shelter, as a learning project for the Epicodus class. You can add and view animals to a MySQL database using the API's endpoints. Includes full CRUD (Create, Read, Update, Delete) functionality.
+
+Our Animal model for the database table includes the following properties:
+* Name
+* Species
+* Breed
+* Color
+* Size
+* SpayedOrNeutered (if the animal has been either spayed or neutered)
+* Age (an integer, number of years; use decimals for number of months, e.g. 3.5 for 3 years and 6 months old)
+* Gender
+* Description
 
 ## Setup/Installation Requirements
 
@@ -54,4 +65,23 @@ dotnet ef database update
 
 ### Endpoints
 
-/* TODO */
+Here is a list of endpoints for the API that can be used by applications. For testing, you can use an API client such as [Postman](https://www.postman.com/downloads/) to make requests to the following endpoints.
+
+* CREATE an animal -- POST: http://localhost:5000/api/animals
+To add an animal, make a POST request to the above URL. The JSON body should follow this format, as an example:
+```
+{ 
+    "name": "Annabelle",
+    "species": "Dog",
+    "breed": "Golden Retriever",
+    "color": "Yellow",
+    "size": "Large",
+    "spayedOrNeutered": true,
+    "Age": 10, 
+    "Gender": "Female",
+    "Description": "A really cute dog" 
+}
+```
+
+* READ all animals -- GET: http://localhost:5000/api/animals
+To retrieve a JSON response listing all of the animals, make a GET request to the above URL.
