@@ -1,6 +1,4 @@
-using System;
-
-namespace AnimalShelter
+namespace AnimalShelter.Models
 {
     public class Animal
     {
