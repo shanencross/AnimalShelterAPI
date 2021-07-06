@@ -117,9 +117,10 @@ For example (using ```http://localhost:5000```as an example domain):
 http://localhost:5000/api/animals/2
 ```
 
-The JSON body should follow the following format, as an example, and you must include all key/value pairs, not just the ones you are modifying:
+The JSON body should follow the following format, as an example. You must include all key/value pairs, not just the ones you are modifying, including the animal id number:
 ```
 { 
+    "animalId": 2,
     "name": "Matilda",
     "species": "Dog",
     "breed": "Labrador",
