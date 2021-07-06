@@ -152,3 +152,13 @@ By default, the "page size" is set to 3, meaning there will be three animals per
 ```
 http://localhost:5000/api/animals?pageSize=5&page=2
 ```
+
+## Known Bugs
+
+None.
+
+## License
+
+[MIT](LICENSE)
+
+Copyright (c) 2021 Shanen Cross
