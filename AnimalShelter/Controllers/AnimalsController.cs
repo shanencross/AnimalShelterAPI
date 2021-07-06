@@ -20,7 +20,7 @@ namespace AnimalShelter.Controllers
 
         // GET: api/animals
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, string breed, string color, string size, bool? spayedOrNeutered, float? lowestAge, float? highestAge, string gender)
+        public async Task<ActionResult<IEnumerable<Animal>>> Get(int? page, int? pageSize, string species, string breed, string color, string size, bool? spayedOrNeutered, float? lowestAge, float? highestAge, string gender)
         {
             var query = _db.Animals.AsQueryable();
 
@@ -72,7 +72,19 @@ namespace AnimalShelter.Controllers
             if (gender != null)
             {
                 query = query.Where(entry => entry.Gender == gender);
-            }      
+            }
+
+            // pagination
+            if (page != null)
+            {
+                // set default page size (animals per page) of none is provided
+                if (pageSize == null)
+                {
+                    pageSize = 3;
+                }
+
+                query = query.Skip(pageSize.Value * (page.Value - 1)).Take(pageSize.Value);
+            }
 
             return await query.ToListAsync();
         }
