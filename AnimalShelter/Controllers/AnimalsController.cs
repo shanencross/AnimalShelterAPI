@@ -77,7 +77,7 @@ namespace AnimalShelter.Controllers
             // pagination
             if (page != null)
             {
-                // set default page size (animals per page) of none is provided
+                // set default page size (animals per page) if none is provided
                 if (pageSize == null)
                 {
                     pageSize = 3;
