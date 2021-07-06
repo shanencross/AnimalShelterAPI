@@ -23,7 +23,7 @@ Our Animal model for the database table includes the following properties:
 * Color
 * Size
 * SpayedOrNeutered (if the animal has been either spayed or neutered)
-* Age (an integer, number of years; use decimals for number of months, e.g. 3.5 for 3 years and 6 months old)
+* Age (number of years; use decimals for number of months, e.g. 3.5 for 3 years and 6 months old)
 * Gender
 * Description
 
