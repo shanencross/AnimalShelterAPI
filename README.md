@@ -101,3 +101,10 @@ Enter query parameters like so (using ```http://localhost:5000``` as an example 
 ```
 http://localhost:5000/api/animals?species=dog&breed=labrador&color=yellow&size=small&spayedOrNeutered=false&lowestAge=0&highestAge=3&gender=male
 ```
+#### READ an animal -- GET: api/animals/{id}
+To retrievew a JSON response for a specific animal make a GET request to this endpoint, substituting ``{id}``` with the id number for the animal.
+
+For example (using ```http://localhost:5000``` as an example domain):
+```
+http://localhost:5000/api/animals/2
+```
