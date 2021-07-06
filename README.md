@@ -134,7 +134,7 @@ The JSON body should follow the following format, as an example. You must includ
 }
 ```
 #### DELETE an animal -- DELETE: api/animals/{id}
-To remove an animal from the database, make a DELTE request to this endpoint, substituting ```{id}``` with the id number for the animal you wish to remove.
+To remove an animal from the database, make a DELETE request to this endpoint, substituting ```{id}``` with the id number for the animal you wish to remove.
 
 For example (using ```http://localhost:5000``` as an example domain):
 ```
