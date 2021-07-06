@@ -69,7 +69,7 @@ Here is a list of endpoints for the API that can be used by applications. For te
 
 To use an endpoint, make a request to the endpoint with the proper domain as a base. If running the server locally, the domain will be ```http://localhost:5000``` by default. For example, for an endpoint of ```api/animals```, make a request to ```http://localhost:5000/api/animals```. 
 
-## CREATE an animal -- POST: api/animals
+#### CREATE an animal -- POST: api/animals
 To add an animal, make a POST request to this endpoint. The JSON body should follow this format, as an example:
 ```
 { 
@@ -85,7 +85,7 @@ To add an animal, make a POST request to this endpoint. The JSON body should fol
 }
 ```
 
-## READ all animals -- GET: api/animals
+#### READ all animals -- GET: api/animals
 To retrieve a JSON response listing all of the animals, make a GET request to this endpoint. There are optional query parameters that you can use to search for animals more specifically:
 
 * species
