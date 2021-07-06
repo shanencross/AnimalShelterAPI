@@ -148,7 +148,7 @@ For endpoints that return multiple objects (in this case, just the "READ animals
 ```
 http://localhost:5000/api/animals?page=1
 ```
-By default, the "page size" is set to 3, meaning there will be three animals per page. But we can change this as well with another query parameter. Here's a request that sets the page sized to 5, and receives only the second page of results:
+By default, the "page size" is set to 3, meaning there will be three animals per page. But we can change this as well with another query parameter. Here's a request that sets the page size to 5, and receives only the second page of results:
 ```
 http://localhost:5000/api/animals?pageSize=5&page=2
 ```
