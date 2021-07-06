@@ -102,7 +102,37 @@ Enter query parameters like so (using ```http://localhost:5000``` as an example 
 http://localhost:5000/api/animals?species=dog&breed=labrador&color=yellow&size=small&spayedOrNeutered=false&lowestAge=0&highestAge=3&gender=male
 ```
 #### READ an animal -- GET: api/animals/{id}
-To retrievew a JSON response for a specific animal make a GET request to this endpoint, substituting ``{id}``` with the id number for the animal.
+To retrieve a JSON response for a specific animal, make a GET request to this endpoint, substituting ```{id}``` with the id number for the animal.
+
+For example (using ```http://localhost:5000``` as an example domain):
+```
+http://localhost:5000/api/animals/2
+```
+
+#### UPDATE an animal -- PUT: api/animals/{id}
+To update a specific animal, make a PUT request to this endpoint, substituting ```{id}``` with the id number for the animal you wish to modify. 
+
+For example (using ```http://localhost:5000```as an example domain):
+```
+http://localhost:5000/api/animals/2
+```
+
+The JSON body should follow the following format, as an example, and you must include all key/value pairs, not just the ones you are modifying:
+```
+{ 
+    "name": "Matilda",
+    "species": "Dog",
+    "breed": "Labrador",
+    "color": "Chocolate",
+    "size": "Large",
+    "spayedOrNeutered": false,
+    "Age": 7, 
+    "Gender": "Female",
+    "Description": "A cool cool dog" 
+}
+```
+#### DELETE an animal -- DELETE: api/animals/{id}
+To remove an animal from the database, make a DELTE request to this endpoint, substituting ```{id}``` with the id number for the animal you wish to remove.
 
 For example (using ```http://localhost:5000``` as an example domain):
 ```
