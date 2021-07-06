@@ -85,7 +85,7 @@ To add an animal, make a POST request to this endpoint. The JSON body should fol
 }
 ```
 
-#### READ all animals -- GET: api/animals
+#### READ animals -- GET: api/animals
 To retrieve a JSON response listing all of the animals, make a GET request to this endpoint. There are optional query parameters that you can use to search for animals more specifically:
 
 * species
@@ -101,6 +101,7 @@ Enter query parameters like so (using ```http://localhost:5000``` as an example 
 ```
 http://localhost:5000/api/animals?species=dog&breed=labrador&color=yellow&size=small&spayedOrNeutered=false&lowestAge=0&highestAge=3&gender=male
 ```
+
 #### READ an animal -- GET: api/animals/{id}
 To retrieve a JSON response for a specific animal, make a GET request to this endpoint, substituting ```{id}``` with the id number for the animal.
 
@@ -138,4 +139,16 @@ To remove an animal from the database, make a DELTE request to this endpoint, su
 For example (using ```http://localhost:5000``` as an example domain):
 ```
 http://localhost:5000/api/animals/2
+```
+
+#### Pagination
+
+For endpoints that return multiple objects (in this case, just the "READ animals" endpoint), pagination can be to split the results into pages, each with a limited number of entries. To get only the first "page" of animals, we can make a GET request to the following (using ```http://localhost:5000``` as an example domain):
+
+```
+http://localhost:5000/api/animals?page=1
+```
+By default, the "page size" is set to 3, meaning there will be three animals per page. But we can change this as well with another query parameter. Here's a request that sets the page sized to 5, and receives only the second page of results:
+```
+http://localhost:5000/api/animals?pageSize=5&page=2
 ```
