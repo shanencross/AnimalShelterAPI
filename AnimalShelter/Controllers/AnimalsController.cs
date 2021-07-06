@@ -36,7 +36,7 @@ namespace AnimalShelter.Controllers
 
             if (lowestAge != null && highestAge != null)
             {
-                query = query.Where(entry => entry.Age >= lowestAge && entry.Age <= highestAge);
+                query = query.Where(entry => entry.Age >= lowestAge.Value && (float.IsInfinity(highestAge.Value) || entry.Age <= highestAge.Value));
             }
 
             if (species != null)
